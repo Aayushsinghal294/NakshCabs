@@ -1,0 +1,195 @@
+
+#page-header{
+    background-image: url("../assets/bb2.png");
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    position: Relative;
+}
+#page-header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+
+#page-header h2 {
+    font-family: "Kanit", sans-serif;
+    color:  rgb(255, 196, 0);
+    font-weight: 650;
+    font-size: 6.8rem;
+    top: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+#page-header p {
+    font-family: "Kanit", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    top: 330px;
+    font-weight: 500;
+    position: absolute;
+}
+
+
+
+.feat{
+    background: #e3e6f3;
+  }
+
+  
+ .btn3{
+    background: transparent;
+    color: red;
+    padding: 14px 25px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid red;
+    outline: 0;
+  }
+  .btn4{
+    background:transparent;
+    color: green;
+    padding: 14px 25px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 2px solid green;
+    outline: 0;
+    margin: 5px;
+  }
+    .btn3:hover{
+        background: rgba(255, 23, 23, 0.896);
+        color: white;
+    }
+    .btn4:hover{
+        background: green;
+        color: white;
+    }
+
+  
+
+    #ertiga{
+        margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    #etios{
+        margin-top: 10px;
+        margin-bottom: 24px;
+    }
+    #innova{
+      
+        margin-bottom: 29px;
+    }
+
+    #toofan{
+      
+        margin-bottom: 15px;
+    }
+
+
+    #tavera{
+        
+        margin-bottom: 14px;
+    }
+
+    #crysta{
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+
+
+
+
+
+    @media (max-width: 768px) {
+
+
+        
+#page-header{
+    width: 112.5%;
+    height: 60vh;
+   
+}
+
+#page-header h2 {
+    font-family: "Kanit", sans-serif;
+    color:  rgb(255, 196, 0);
+    font-weight: 650;
+    font-size: 6.8rem;
+    top: 150px;
+    margin-bottom: 20px;
+    position: absolute;
+}
+
+#page-header p {
+    font-family: "Kanit", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    top: 330px;
+    font-weight: 500;
+    position: absolute;
+}
+
+
+
+
+
+    }
+
+    
+
+
+@media (max-width: 480px) {
+
+
+     
+    #page-header{
+       
+        width: 165.5%;
+        height: 60vh;
+    }
+    
+    #page-header h2 {
+        font-family: "Kanit", sans-serif;
+        color:  rgb(255, 196, 0);
+        font-weight: 650;
+        font-size: 6.8rem;
+        top: 150px;
+        margin-bottom: 20px;
+        position: absolute;
+    }
+    
+    #page-header p {
+        font-family: "Kanit", sans-serif;
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+        top: 330px;
+        font-weight: 500;
+        position: absolute;
+    }
+    
+    
+    
+    
+     
+
+
+}

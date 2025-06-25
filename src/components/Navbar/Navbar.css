@@ -1,0 +1,262 @@
+/* General styles for the navbar */
+.navbar {
+  width: 100%;
+  background: -webkit-linear-gradient(0deg, #ffffff,#e8b6b6, #ffd000);
+  color: #000000;
+  padding: 0px 0;
+  position: sticky;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  font-weight: 650;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100px;
+  width: 200px;
+  border-radius: 0px;
+  border: #ffffff;
+}
+
+/* Styles for the navigation links */
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 5px 25px;
+  font-size: 18px;
+  font-weight: 750;
+}
+
+nav li:not(.active):hover {
+  color: #000000;
+  border-radius: 5px;
+  text-decoration: underline;
+}
+
+.active {
+  color: #f90000;
+}
+
+/* Button styles */
+.btn {
+  background: black;
+  color: white;
+  padding: 14px 25px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.btn:hover {
+  background: rgb(210, 208, 208);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+/* Styles for mobile menu icons */
+.nav-mob-open {
+  display: none;
+}
+
+.nav-mob-close {
+  display: none;
+}
+
+/* Media query for small screens */
+
+
+.nav-menu{
+ 
+  display: flex;
+}
+
+
+.nav-items{
+  margin-top: 10px;
+  margin-right: -50px;
+}
+
+.book-btn{
+  margin-top: -15px;
+  margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+
+
+/* General styles for the navbar */
+.navbar {
+  width: 112.50%;
+  background: -webkit-linear-gradient(0deg, #ffffff,#e8b6b6, #ffd000);
+  color: #000000;
+  padding: 22px 0;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  box-shadow: #8c8c8c 0px 5px 6px;
+}
+
+
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 60px;
+    top: 60px;
+    height: 20px;
+    width: 32px;
+    height: 32px;
+    filter: invert(0);
+   
+  }
+
+  .nav-mob-close {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 23px;
+    filter: invert(0);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100%;
+    background: -webkit-linear-gradient(207deg, #ffffff,#e8b6b6, #ffd000);
+    transition: right 0.5s;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 40px;
+    padding-top: 100px;
+  }
+
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .nav-menu li {
+    font-size: 27px;
+    padding: 15px 0;
+  }
+
+  #btnn {
+    margin-left: 40px;
+    margin-top: -20px;
+    
+  
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+
+/* General styles for the navbar */
+.navbar {
+  width: 165.65%;
+  background: -webkit-linear-gradient(0deg, #ffffff,#e8b6b6, #ffd000);
+ 
+}
+
+
+ .container {
+    margin: 1rem 1.25rem;
+  }
+
+  .nav-mob-open {
+      top: 68px;
+    right: 2.9rem;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .nav-mob-close {
+    top: 2.1rem;
+    right: 2.1rem;
+    width: 1.25rem;
+  }
+
+  .nav-menu {
+    width: 17.5rem;
+    right: -17.5rem;
+    padding-top: 5.5rem;
+  }
+
+  .nav-menu li {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+}
