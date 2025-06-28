@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import './Contact.css'
 import location from '../assets/location.png'
 import mail from '../assets/mail.png'
 import call from '../assets/call.png'
@@ -11,78 +10,43 @@ import whatsapp from '../assets/whatsapp.png'
 import linkedin from '../assets/linkedin.png'
 import youtube from '../assets/youtube.png'
 
-const Contact = () => {
-
-    
-  useEffect(() => {
-    document.title = "Contact | Naksh Cab Service";
-},[]);
-
-  return (
-    <>
-      
-<section className="contact-header">
-    <h2>CONTACT US</h2>
-    <p>We are always there for your help ...</p>
-</section>
-
-<section id="contact-details" className="section-p1">
-    <div className="details">
-        <span>GET IN TOUCH</span>  
-        <h2>Visit us or contact us today</h2> 
-        <h3>Head Office</h3>
-        <div className="cc">
-            <li>
-            <img className="icon" src={location} alt=""/>
-        <p>315, Pink City , Vijay Nagar , Indore (452010)</p>
-    </li>
-    <li>
-        <img className="icon" src={mail} alt=""/>
-   <a href="shubhamkumrawat86@gmail.com?body=My custom mail body"><p>shubhamkumrawat86@gmail.com</p></a> 
-</li>
-<li>
-    <img className="icon" src={call} alt=""/>
-    <a href="tel:+91-966-961-0726"><p>+91 96696 10726</p></a>
-</li>
-</div>
-<div className="follow">
-                <h3>Follow Us</h3>
-                <ul className="lll">
-                    <li><a href="/"><img  className='icong' src={instagram} alt="" /></a></li>
-                    <li><a href="/"><img className='icong' src={whatsapp} alt="" /></a></li>
-                    <li><a href="/"><img className='icong' src={linkedin} alt="" /></a></li>
-                    <li><a href="/"><img className='icong' src={youtube} alt="" /></a></li>
-                </ul>
-            </div>
-     </div>
-<div className="map">
-<iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d1839.3098720107141!2d75.88708453860752!3d22.77948889483624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m5!1s0x396302cf719936cd%3A0xf8c9b28d50ccb81d!2sPink%20City%2C%20Indore%2C%20Madhya%20Pradesh%20453771!3m2!1d22.780704999999998!2d75.8895603!4m0!5e0!3m2!1sen!2sin!4v1720089771090!5m2!1sen!2sin" width="600" height="450" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
-
+const Contact = () => (
+  <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 py-16">
+    <h1 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-6">Contact Us</h1>
+    <p className="text-lg text-gray-300 mb-8 max-w-xl text-center">
+      Have questions or want to book a ride? Reach out to us!
+    </p>
+    <div className="bg-gray-900 rounded-2xl shadow-lg p-8 w-full max-w-md">
+      <form className="flex flex-col gap-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+        <textarea
+          placeholder="Your Message"
+          rows={4}
+          className="px-4 py-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+        />
+        <button
+          type="submit"
+          className="bg-yellow-400 text-black font-bold py-3 rounded-full hover:bg-yellow-300 transition"
+        >
+          Send Message
+        </button>
+      </form>
+      <div className="mt-8 text-center text-gray-400 text-sm">
+        <div>Email: <a href="mailto:info@nakshcabs.com" className="text-yellow-400">info@nakshcabs.com</a></div>
+        <div>Phone: <a href="tel:+1234567890" className="text-yellow-400">+123 456 7890</a></div>
+        <div>WhatsApp: <a href="https://wa.me/919669610726" className="text-yellow-400">+91 96696 10726</a></div>
+      </div>
     </div>
-</section>
+  </div>
+);
 
-<section id="form-details">
-    <form action="">
-        <span>LEAVE A MESSAGE</span>
-        <h2>We love to hear from you</h2>
-        <input type="text" placeholder="Your Name"/>
-        <input type="text" placeholder="E-mail"/>
-        <textarea name="" id="" cols="30" rows="6" placeholder="Your Feedback"></textarea>
-        <button className="btn">Submit</button>
-    </form>
-    <div className="people">
-    <img id='tav' src={swift} alt=""/>
-<div>
-    <img src={user_2} alt=""/>
-    <p><span>Shubham Kumrawat</span>Owner @ Naksh Cab Service<br/> Phone : +91 96696 10726<br/> Email : shubhamkumarawat86@gmail.com</p>
-</div>
-    <img id='et' src={Etios} alt=""/>
-
-    </div>
-</section>
-
-    </>
-  )
-}
-
-export default Contact
+export default Contact;

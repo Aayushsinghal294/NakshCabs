@@ -1,269 +1,56 @@
-import React, { useEffect } from "react";
-import "./Rides.css";
-import b4 from "../assets/b4.jpg";
-import star from "../assets/star.png";
-import swift from "../assets/swift.png";
-import ertiga from "../assets/ertiga.png";
-import Etios from "../assets/Etios.png";
-import innova from "../assets/innova.png";
-import tavera from "../assets/tavera.png";
-import tempotravel from "../assets/tempotravel.png";
-import crysta from "../assets/crysta.png";
-import toofan from "../assets/toofan.png";
-const Rides = () => {
+import React from 'react';
+import star from '../assets/star.png';
+import swift from '../assets/swift.png';
+import ertiga from '../assets/ertiga.png';
+import Etios from '../assets/Etios.png';
+import innova from '../assets/innova.png';
+import tavera from '../assets/tavera.png';
+import tempotravel from '../assets/tempotravel.png';
+import crysta from '../assets/crysta.png';
+import toofan from '../assets/toofan.png';
 
-  
-  useEffect(() => {
-    document.title = "Rides | Naksh Cab Service";
-},[]);
+const rides = [
+  { img: swift, name: "Swift Dzire (4+1)", price: 11 },
+  { img: Etios, name: "Toyota Etios (4+1)", price: 12 },
+  { img: ertiga, name: "Maruti Ertiga (6+1)", price: 13 },
+  { img: tavera, name: "Chevrolet Tavera (8+1)", price: 14 },
+  { img: innova, name: "Toyota Innova (7+1)", price: 15 },
+  { img: toofan, name: "Force Toofan (12+1)", price: 15 },
+  { img: crysta, name: "Innova Crysta (7+1)", price: 18 },
+  { img: tempotravel, name: "Tempo Traveller (17+1)", price: 24 },
+  { img: tempotravel, name: "Tempo Traveller (26+1)", price: 32 },
+];
 
-  return (
-    <>
-      <section id="page-header">
-        <h2>OUR CABS</h2>
-        <p>Choose the Cab according to your Need !!</p>
-      </section>
-
-      <section id="product-1" className="section-p1">
-        <h2 id="feee">Explore Our Rides ...</h2>
-        <div className="pro-container">
-          <div className="pro">
-            <div className="shop1">
-              <img src={swift} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Swift Dzire (4+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 11 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
+const Rides = () => (
+  <div className="bg-black text-white min-h-screen py-12 px-2 md:px-10">
+    <h1 className="text-3xl md:text-5xl font-bold text-center text-yellow-400 mb-8">Our Rides</h1>
+    <div className="flex flex-wrap justify-center gap-8">
+      {rides.map((ride) => (
+        <div key={ride.name} className="bg-gray-900 rounded-2xl shadow-lg w-full max-w-xs flex flex-col items-center p-6">
+          <img src={ride.img} alt={ride.name} className="w-full h-40 object-cover rounded-xl mb-4" />
+          <span className="text-yellow-400 font-semibold mb-1">Ac/NonAc</span>
+          <h5 className="text-xl font-bold mb-2">{ride.name}</h5>
+          <div className="flex mb-2">
+            {[...Array(5)].map((_, i) => (
+              <img key={i} src={star} alt="star" className="w-5 h-5" />
+            ))}
           </div>
-
-          <div className="pro">
-            <div className="shop1">
-              <img id="etios" src={Etios} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Toyota Etios (4+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 12 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
+          <ul className="text-gray-300 text-sm mb-3">
+            <li>Pricing: ₹ {ride.price} Per KM</li>
+            <li>250 Km Per Day</li>
+          </ul>
+          <div className="flex gap-2 mt-auto">
+            <a href="tel:+91-966-961-0726">
+              <button className="border-2 border-red-600 text-red-600 px-4 py-2 rounded-lg font-bold hover:bg-red-600 hover:text-white transition">Call Now</button>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=919669610726" target="_blank" rel="noopener noreferrer">
+              <button className="border-2 border-green-600 text-green-600 px-4 py-2 rounded-lg font-bold hover:bg-green-600 hover:text-white transition">Whatsapp</button>
+            </a>
           </div>
-          <div className="pro">
-            <div className="shop1">
-              <img id="ertiga" src={ertiga} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Maruti Ertiga (6+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 13 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-          <div className="pro">
-            <div className="shop1">
-              <img id="tavera" src={tavera} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Chevrolet Tavera (8+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 14 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-          <div className="pro">
-            <div className="shop1">
-              <img id="innova" src={innova} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Toyota Innova (7+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 15 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="pro">
-            <div className="shop1">
-              <img id="toofan" src={toofan} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Force Toofan (12+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 15 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="pro">
-            <div className="shop1">
-              <img id="crysta" src={crysta} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Innova Crysta (7+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 18 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-
-          <div className="pro">
-            <div className="shop1">
-              <img src={tempotravel} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Tempo Traveller (17+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 24 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-
-
-          <div className="pro">
-            <div className="shop1">
-              <img src={tempotravel} alt="" />
-            </div>
-            <div className="des">
-              <span>Ac/NonAc</span>
-              <h5>Tempo Traveller (26+1)</h5>
-              <div className="star">
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-                <img src={star} className="icon" alt="" />
-              </div>
-              <ul>
-                <li>Pricing: ₹ 32 Per KM</li>
-                <li> 250 Km Per Day</li>
-              </ul>
-              <br />
-              <div className="btn2">
-              <a href="tel:+91-966-961-0726"><button className='btn3'>Call Now</button></a>  
-                <a href="https://api.whatsapp.com/send?phone=919669610726" target='_blank'>  <button className='btn4'>Whatsapp</button></a>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </section>
-    </>
-  );
-};
+      ))}
+    </div>
+  </div>
+);
 
 export default Rides;

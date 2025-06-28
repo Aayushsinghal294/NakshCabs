@@ -1,159 +1,44 @@
-import React, { useEffect } from 'react'
-import './Packages.css'
-import taxibg from '../assets/viiw.png'
-import star1 from "../assets/star.png";
-import ujjain from "../assets/ujjain.png";
-import bhopal from "../assets/bhopal.png";
-import maheshwar from "../assets/maheshwar.png";
-import mandav from "../assets/mandav.png";
-import omkareshwar from "../assets/omkareshwar.png";
+import React from 'react';
 
-const Packages = () => {
+const packages = [
+  {
+    name: "Indore to Ujjain",
+    desc: "Round trip cab package with sightseeing.",
+    price: "₹1800",
+  },
+  {
+    name: "Indore to Omkareshwar",
+    desc: "Comfortable cab for pilgrimage and return.",
+    price: "₹2500",
+  },
+  {
+    name: "Indore to Mandav",
+    desc: "Heritage tour package with experienced driver.",
+    price: "₹3200",
+  },
+  {
+    name: "Indore to Bhopal",
+    desc: "Day trip to Bhopal with flexible timings.",
+    price: "₹4000",
+  },
+];
 
-  
-  useEffect(() => {
-    document.title = "Packages | Naksh Cab Service";
-},[]);
-
-  return (
-    <>
-       <section>
-        <img src={taxibg} className='taxibg'  alt="" />
-       </section>
-<section id="hero11">
-    <h2>OUR PACKAGES ...</h2>
-    <p>Choose the best package for your Flawless Ride</p>
-</section>
-
-<section id="packages-1" >
-        <h2 id="fee"><span> Explore</span> Our Rides ...</h2>
-        <div className="pp1">
-          <div className="p2">
-            <div className="shop1">
-              <img className='ujjain' src={ujjain} alt="" />
-            </div>
-            <div className="descrip">
-            <div className="desi">
-              <h5>Indore to Ujjain</h5>
-              <div className="star1">
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-              </div>
-              <ul>
-                <p>Round Trip :- ₹ 3000/- </p>
-                <p>One Round :- ₹ 1500/- </p>
-                <p>Only 300 km Perday </p>
-              </ul>
-              <br />
-             
-            </div>
-            </div>
-          </div>
-
-          <div className="p2">
-          
-            <div className="desi descrip1">
-              
-              <h5>Indore to Bhopal</h5>
-              <div className="star1">
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-              </div>
-              <ul>
-              <p>Round Trip :- ₹ 5000/- </p>
-                <p>One Round :- ₹ 3500/- </p>
-                <p>Only 300 km Perday </p>
-              </ul>
-              <br />
-             
-            </div>
-            <div className="shop1">
-              <img id="bhopal" src={bhopal} alt="" />
-            </div>
-          </div>
-
-
-          <div className="p2">
-            <div className="shop1">
-              <img id="maheshwar" src={maheshwar} alt="" />
-            </div>
-            <div className="desi descrip">
-              <h5>Indore to Maheshwar</h5>
-              <div className="star1">
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-              </div>
-              <ul>
-              <p>Round Trip :- ₹ 3000/- </p>
-                <p>One Round :- ₹ 2500/- </p>
-                <p>Only 300 km Perday </p>
-              </ul>
-              <br />
-             
-            </div>
-          </div>
-
-          <div className="p2">
-           
-            <div className="desi descrip1">
-              <h5>Indore to Omkareshwar</h5>
-              <div className="star1">
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-              </div>
-              <ul>
-              <p>Round Trip :- ₹ 3000/- </p>
-                <p>One Round :- ₹ 2500/- </p>
-                <p>Only 300 km Perday </p>
-              </ul>
-              <br />
-             
-            </div>
-            <div className="shop1">
-              <img id='omkareshwar' src={omkareshwar} alt="" />
-            </div>
-          </div>
-
-
-          <div className="p2">
-            <div className="shop1">
-              <img id='mandav' src={mandav} alt="" />
-            </div>
-            <div className="desi descrip">
-              <h5>Indore to Mandav</h5>
-              <div className="star1">
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-                <img src={star1} className="icon" alt="" />
-              </div>
-              <ul>
-              <p>Round Trip :- ₹ 3500/- </p>
-                <p>One Round :- ₹ 3000/- </p>
-                <p>Only 300 km Perday </p>
-              </ul>
-              <br />
-            
-            </div>
-          </div>
-
+const Packages = () => (
+  <div className="min-h-screen bg-black text-white py-12 px-4 md:px-20">
+    <h1 className="text-3xl md:text-5xl font-bold text-yellow-400 mb-8 text-center">Cab Packages</h1>
+    <div className="flex flex-wrap justify-center gap-8">
+      {packages.map((pkg) => (
+        <div key={pkg.name} className="bg-gray-900 rounded-2xl shadow-lg w-full max-w-xs p-6 flex flex-col items-center">
+          <h2 className="text-xl font-bold text-yellow-300 mb-2">{pkg.name}</h2>
+          <p className="text-gray-200 mb-4 text-center">{pkg.desc}</p>
+          <div className="text-2xl font-bold text-yellow-400 mb-4">{pkg.price}</div>
+          <a href="tel:+91-966-961-0726">
+            <button className="bg-yellow-400 text-black font-bold px-6 py-2 rounded-full hover:bg-yellow-300 transition">Book Now</button>
+          </a>
         </div>
-      </section>
-    </>
-  )
-}
+      ))}
+    </div>
+  </div>
+);
 
-export default Packages
+export default Packages;
