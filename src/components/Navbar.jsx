@@ -154,7 +154,7 @@ const Navbar = () => {
         {/* Overlay */}
         {isOpen && (
           <div
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[1500] lg:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[1500] lg:hidden"
             onClick={() => setIsOpen(false)}
           />
         )}
